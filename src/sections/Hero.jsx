@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {Button } from '@/components/Button';
 import { ArrowRight, ChevronDown, Download } from 'lucide-react';
 import { Github, Linkedin, Twitter } from "lucide-react";
@@ -22,6 +22,8 @@ const skills = [
   "GitHub Actions",
 ]
 export const Hero = () => {
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  
   return (
     <section className='relative min-h-screen flex items-center overflow-hidden'>
 
@@ -85,15 +87,22 @@ export const Hero = () => {
 
             {/* CTAs */}
             <div className='flex flex-wrap gap-4 animate-fade-in animation-delay-300'>
-              <Button size="lg">
+              <Button size="lg"
+              onClick={() => {
+                setIsMobileMenuOpen(false);
+                const el = document.getElementById("contact");
+                if (el) {
+                  el.scrollIntoView({ behavior: "smooth" });
+                }
+              }}>
                 Contact Me <ArrowRight className='w-5 h-5'/>
               </Button>
               <a href="/cv.pdf" download="Majitha_P_CV.pdf">
-  <AnimatedBorderButton>
-    <Download className='w-5 h-5' />
-    Download CV
-  </AnimatedBorderButton>
-</a>
+                <AnimatedBorderButton>
+                  <Download className='w-5 h-5' />
+                  Download CV
+                </AnimatedBorderButton>
+              </a>
             </div>
             
             {/* Social Links */}

@@ -51,16 +51,16 @@ export const Navbar = () => {
         {/* CTA button */}
         <div className='hidden md:block'>
           <Button size='sm'
-  onClick={() => {
-    setIsMobileMenuOpen(false);
-    const el = document.getElementById("contact");
-    if (el) {
-      el.scrollIntoView({ behavior: "smooth" });
-    }
-  }}
->
-  Contact Me
-</Button>
+            onClick={() => {
+              setIsMobileMenuOpen(false);
+              const el = document.getElementById("contact");
+              if (el) {
+                el.scrollIntoView({ behavior: "smooth" });
+              }
+            }}
+          >
+            Contact Me
+          </Button>
         </div>
 
         {/* mobile menu button */}
@@ -83,7 +83,14 @@ export const Navbar = () => {
                 </a>
             ))}
             
-            <Button >Contact Me</Button>
+            <Button 
+             onClick={() => {
+              setIsMobileMenuOpen(false);
+              const el = document.getElementById("contact");
+              if (el) {
+                el.scrollIntoView({ behavior: "smooth" });
+              }
+            }}>Contact Me</Button>
 
         </div>
       </div>)}
