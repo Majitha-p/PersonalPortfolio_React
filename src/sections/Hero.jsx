@@ -14,7 +14,7 @@ const skills = [
   "Firebase",
   "AWS",
   "Tailwind CSS",
-  "Figma",
+  "Vercel",
   "Python",
   "Django",
   "Flask",
@@ -80,7 +80,7 @@ export const Hero = () => {
                 </span>
               </h1>
               <p className='text-lg text-muted-foreground max-w-lg animate-fade-in animation-delay-200'>
-                Hi, I am MAjitha P - a Front End Developer specializing in React and 
+                Hi, I am Majitha P - a Front End Developer specializing in React and 
                 JavaScript. I built scalabe, performant web applications that users love.
               </p>
             </div>
@@ -97,7 +97,7 @@ export const Hero = () => {
               }}>
                 Contact Me <ArrowRight className='w-5 h-5'/>
               </Button>
-              <a href="/cv.pdf" download="Majitha_P_CV.pdf">
+              <a href="/cv.pdf" download="Majitha_P_Resume.pdf">
                 <AnimatedBorderButton>
                   <Download className='w-5 h-5' />
                   Download CV
