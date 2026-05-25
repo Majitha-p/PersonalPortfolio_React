@@ -12,13 +12,13 @@ const highlights = [
     icon: Rocket,
     title: "Performance",
     description: 
-      "Optimizing for speed and delivering lightening-fast user experiance."
+      "Optimizing for speed and delivering lightening-fast user experience."
   },
   {
     icon: Users,
     title: "Collaboration",
     description: 
-      "Working closley with team to bring ideas to life"
+      "Working closely with a team to bring ideas to life"
   },
   {
     icon: Lightbulb,
@@ -48,27 +48,25 @@ export const About = () => {
         </h2  >
         <div className='space-y-4 text-muted-foreground animate-fade-in animation-delay-200'>
           <p>
-            I'm a passionate software developer with hands-on experiance crafting digital 
-            products that make a difference. My jeorney started with a curiosity
-            for how things work on the web, and it has evolved into a deep expertise 
-            in modern frontend technologies.
+           I'm a passionate software developer with hands-on experience crafting digital products that 
+           make a difference. My journey started with a curiosity for how things work on the web, and it 
+           has evolved into a deep expertise in modern frontend technologies.
           </p>
           <p>
-            I specialized in React, JavaScript and modern frontend practices
-            building everything from sleek landing pages to complex enterprise
-            applications. My approach combines technical excellence with a keen everything and design and user 
-            experiance.
+            I specialize in React, JavaScript, and modern frontend practices, building everything from 
+            sleek landing pages to complex enterprise applications. My approach combines technical 
+            excellence with a keen eye for design and user experience.
           </p>
           <p>
-            When I'm not coding, you'll find me exploring new technologies, contributing 
-            to open-source projects, or sharing knowledge with the developer community.
+            When I'm not coding, you'll find me exploring new technologies, contributing to open-source projects, 
+            or sharing knowledge with the developer community.
           </p>
         </div>
 
         <div className='glass rounded-2xl p-6 glow-border animate-fade-in animation-delay-300'>
           <p className='text-lg font-medium italic text-foreground'>
-            "My mission to create digital experiances that are not just functional,
-            but truly delightful - products that users love to maintain."
+            "My mission is to create digital experiences that are not just functional, but truly delightful — 
+            products that users love to use."
           </p>
         </div>
         </div>

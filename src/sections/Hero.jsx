@@ -73,7 +73,7 @@ export const Hero = () => {
               <h1 className='text-5xl lg:text-7xl font-bold leading-tight animate-fade-in animation-delay-100'>
                 Crafting <span className='text-primary glow-text'>digital</span>
                 <br />
-                experiance with
+                experience with
                 <br />
                 <span className='font-serif italic font-normal text-white'>
                   precision.
@@ -81,7 +81,7 @@ export const Hero = () => {
               </h1>
               <p className='text-lg text-muted-foreground max-w-lg animate-fade-in animation-delay-200'>
                 Hi, I am Majitha P - a Front End Developer specializing in React and 
-                JavaScript. I built scalabe, performant web applications that users love.
+                JavaScript. I built scalable, performant web applications that users love.
               </p>
             </div>
 
@@ -167,7 +167,7 @@ export const Hero = () => {
             <div className='flex animate-marquee ' >
               {[...skills, ...skills].map((skills, idx) => (
                 <div key={idx} className='flex-shrink-0  px-8 py-4'>
-                  <span className='text-xl font-semibold text-muted-foreground hover:text-foreground'>{skills}</span>
+                  <span className='text-xl font-semibold text-muted-foreground hover:text-foreground '>{skills}</span>
                   </div>
               ))}
             </div>

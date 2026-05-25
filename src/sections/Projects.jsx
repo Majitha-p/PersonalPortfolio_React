@@ -6,7 +6,7 @@ const projects = [
   {
     title: "E-Commerce website",
     description:
-    " online shopping website for clothes with product browsing, cart system, and user authentication.",
+    "An online shopping website for clothes with product browsing, a cart system, and user authentication.",
     image: "/projects/project1.png",
     tags: ["React", "Node.js", "MongoDB"],
     github: "https://github.com/Majitha-p/E-Commerce-Shopper-", 
@@ -14,7 +14,7 @@ const projects = [
   {
     title: "Smart Hospital App",
     description:
-    "A Hospital Booking Online App that allows users to view doctor details, check availability, and book appointments online with contact information.",
+    "A hospital booking online app that allows users to view doctor details, check availability, and book appointments online, along with contact information.",
     image: "/projects/project2.png",
     tags: ["Python", "Django", "SQLite"],
     github: "https://github.com/Majitha-p/E-Hospital",  
@@ -22,7 +22,7 @@ const projects = [
   {
     title: "Resume Analyzer",
     description:
-    " A Resume Analyzer that compares a candidate’s resume with a job description and generates a matching score based on skills, keywords, and relevance.",
+    " A resume analyzer that compares a candidate’s resume with a job description and generates a matching score based on skills, keywords, and relevance.",
     image: "/projects/pro-3.png",
     tags: ["Python", "Streamlit", "NLP"],
     github: "https://github.com/Majitha-p/Resume_job_MatchAnalyzer",  
@@ -56,12 +56,12 @@ export const Projects = () => {
               Projects that 
               <span className='font-serif italic font-normal text-white'>
                 {" "}
-                make an imapct.
+                make an impact.
               </span>
             </h2>
             <p className='text-muted-foreground animate-fade-in animation-delay-200'>
-              A section of my recent work, from complex web application to 
-              innovative tools that solve rela-world problems.
+              A section of my recent work, from complex web applications to innovative tools
+               that solve real-world problems.
             </p>
           </div>
 

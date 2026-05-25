@@ -5,12 +5,12 @@ const experiances = [
     preiod: "Nov 2024 - Dec 2025",
     role: "React Developer",
     company: "FederalTec Technologies, Dubai",
-    description: "Frontend Developer (React) with knowledge of JavaScript, HTML, and CSS. I focus on building scalable and user-friendly applications and learning modern development practices.",
+    description: "Frontend Developer (React) with knowledge of JavaScript, HTML, and CSS. I focus on building scalable, user-friendly applications and continuously learning modern development practices.",
     Technologies: ["React", "JavaScript", "Node.js", "MongoDB"],
     current: "false",
   }
 ]
-export const Experiance = () => {
+export const Experience = () => {
   return (
     <section id='experiance'
     className='py-32 relative overflow-hidden '>
@@ -29,15 +29,15 @@ export const Experiance = () => {
           <h2 className='text-4xl md:text-5xl font-bold
           mt-4 mb-6 animate-fade-in animation-delay-100
           text-secondary-foreground'>
-            Experiance that <span className='font-serif italic font-normal text-white'>
+            Experience that <span className='font-serif italic font-normal text-white'>
               speak volumes.
               </span>
           </h2>
 
           <p className='text-muted-foreground
           animate-fade-in animation-delay-200'>
-            Atimeline of my professional growth, from curious beginner to 
-            frontend developer and building products at scale.
+            A timeline of my professional growth, from a curious beginner to a frontend developer 
+            building products at scale.
           </p>
         </div>
 
