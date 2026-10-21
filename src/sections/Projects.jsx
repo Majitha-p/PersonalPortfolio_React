@@ -66,7 +66,7 @@ export const Projects = () => {
           </div>
 
           {/* projects grid */}
-          <div className='grid md:grid-cols-2 dap-8 '>
+          <div className='grid gap-4 md:grid-cols-2'>
             {projects.map((project,idx)=>(
               <div key={idx} className=' group glass rounded-2xl overflow-hidden animate-fade-in md:row-span-1 '
               style={{animationDelay: `${(idx+1) * 100}ms`}}
@@ -75,6 +75,8 @@ export const Projects = () => {
                 <div className='relative overflow-hidden aspect-video '>
                   <img src={project.image} 
                   alt={project.title}
+                  loading="lazy"
+                  decoding="async"
                   className='w-full h-full object-cover transition-transform duration-700 group-hover:scale-110'
                   />
                   <div 
@@ -88,7 +90,7 @@ export const Projects = () => {
                     className='w-5 h-5
                     '/>
                   </a>
-                  <a href={project.github}>
+                  <a href={project.github} aria-label={`View ${project.title} source code on GitHub`}>
                     <Github className='w-5 h-5'/>
                   </a>
                   </div>

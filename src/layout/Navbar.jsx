@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import { Button } from '@/components/Button'
 import { Menu,X } from 'lucide-react'
+import { SectionButton } from '@/components/SectionButton'
 const navLinks =[
-  {href: "#about", label:"About"},
-  {href: "#projects", label:"Project"},
-  {href: "#experience", label:"Experience"},
-  // {href: "#Hero", label:"hero"},
-  // {href: "#contact", label:"Contact"},
+  {sectionId: "about", label:"About"},
+  {sectionId: "projects", label:"Project"},
+  {sectionId: "experience", label:"Experience"},
 
 ]
 
@@ -29,21 +28,20 @@ export const Navbar = () => {
     ${isScrolled ? "glass-strong py-3" : "bg-transparent py-5"} 
     bg-transparent py-5 z-50`}>
       <nav className='container mx-auto px-6 flex items-center justify-between'>
-        <a 
-          href="#" 
+        <SectionButton
           className='text-xl font-bold tracking-tight hover:text-primary'
           >
           MP<span className='text-primary'>.</span>
-        </a>
+        </SectionButton>
 
         {/* desktop nav */}
         <div className='hidden md:flex  items-center gap-1 '>
           <div className='glass rounded-full px-2 py-1 flex items-center gap-1'>
             {navLinks.map((link, index)=>(
-              <a href={link.href} key={index} 
+              <SectionButton sectionId={link.sectionId} key={index}
               className='px-4 py-2 text-sm text-muted-foreground hover:text-foreground rounded-full hover:bg-surface'>
                 {link.label}
-                </a>
+                </SectionButton>
             ))}
           </div>
         </div>
@@ -75,12 +73,12 @@ export const Navbar = () => {
       {isMobileMenuOpen && (<div className='md:hidden glass-strong animate-fade-in'>
         <div className='container mx-auto px-6 py-6 flex flex-col gap-4'>
           {navLinks.map((link, index)=>(
-              <a href={link.href} 
+              <SectionButton sectionId={link.sectionId}
               key={index} 
               onClick={()=> setIsMobileMenuOpen(false)}
-              className='text-lg text-muted-foreground hover:text-foreground py-2'>
+              className='text-left text-lg text-muted-foreground hover:text-foreground py-2'>
                 {link.label}
-                </a>
+                </SectionButton>
             ))}
             
             <Button 

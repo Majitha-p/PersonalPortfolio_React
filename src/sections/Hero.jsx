@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import {Button } from '@/components/Button';
+import { SectionButton } from '@/components/SectionButton';
 import { ArrowRight, ChevronDown, Download } from 'lucide-react';
-import { Github, Linkedin, Twitter } from "lucide-react";
-import { AnimatedBorderButton } from '../components/AnimatedBorderButton';
+import { Github, Linkedin } from "lucide-react";
 
 
 const skills = [
@@ -31,8 +31,10 @@ export const Hero = () => {
       <div className='absolute inset-0'>
         <img
           src="/Images/hero-bg.jpg"
-          alt="Hero"
-          className='w-full h-full object-cover opacity-40'
+          alt=""
+          aria-hidden="true"
+          decoding="async"
+          className='w-full h-full object-cover opacity-20'
         />
       </div>
 
@@ -41,18 +43,10 @@ export const Hero = () => {
 
       {/* Green dots */}
       <div className='absolute inset-0 overflow-hidden pointer-events-none'>
-        {[...Array(30)].map((_, i) => (
+        {['left-[8%] top-[15%]', 'left-[22%] top-[65%]', 'left-[38%] top-[30%]', 'left-[52%] top-[80%]', 'left-[65%] top-[12%]', 'left-[78%] top-[55%]', 'left-[90%] top-[25%]', 'left-[15%] top-[88%]'].map((position) => (
           <div
-            key={i}
-            className='absolute w-1.5 h-1.5 rounded-full opacity-60'
-            style={{
-              backgroundColor: "#20B2A6",
-              left:`${Math.random()* 100}%`,
-              top: `${Math.random() * 100}%`,
-              animation: `slow-drift ${15 + Math.random() * 20}s 
-                           ease-in-out infinite`,
-              animationDelay: `${Math.random()* 5}s`,
-            }}
+            key={position}
+            className={`absolute w-1 h-1 rounded-full bg-primary opacity-25 motion-safe:animate-[slow-drift_25s_ease-in-out_infinite] ${position}`}
           />
         ))}
       </div>
@@ -71,7 +65,8 @@ export const Hero = () => {
             {/* Headline */}
             <div className='space-y-4 '>
               <h1 className='text-5xl lg:text-7xl font-bold leading-tight animate-fade-in animation-delay-100'>
-                Crafting <span className='text-primary glow-text'>digital</span>
+                <span className='sr-only'>Majitha P — React and Next.js Developer in Dubai. </span>
+                Crafting <span className='text-primary'>digital</span>
                 <br />
                 experience with
                 <br />
@@ -97,11 +92,9 @@ export const Hero = () => {
               }}>
                 Contact Me <ArrowRight className='w-5 h-5'/>
               </Button>
-              <a href="/cv.pdf" download="Majitha_P_Resume.pdf">
-                <AnimatedBorderButton>
+              <a href="/cv.pdf" download="Majitha_P_Resume.pdf" className='inline-flex items-center justify-center gap-2 rounded-xl px-6 py-4 font-medium text-foreground transition-colors hover:bg-surface hover:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary'>
                   <Download className='w-5 h-5' />
                   Download CV
-                </AnimatedBorderButton>
               </a>
             </div>
             
@@ -111,7 +104,6 @@ export const Hero = () => {
               {[
                 {icon: Github, href: "https://github.com/Majitha-p"},
                 {icon: Linkedin, href: "https://www.linkedin.com/in/majitha-p/"},
-                {icon: Twitter, href: "#"},
               ].map((Social, idx) => (
                   <a  
                     key={idx} 
@@ -129,20 +121,22 @@ export const Hero = () => {
               <div
               className='absolute inset-0
               rounded-3xl bg-gradient-to-br 
-              from-primary/30 via-transparent
-              to-primary/30 blur-2xl animate-pulse'
+              from-primary/10 via-transparent
+              to-primary/10 blur-2xl'
               />
-              <div className='relative glass rounded-3xl p-2 glow-border'>
+              <div className='relative rounded-3xl border border-primary/20 bg-card/80 p-2 shadow-xl shadow-black/20'>
                 <img 
                 src="/Images/pr2.png" 
-                alt="Majitha P" 
+                alt="Majitha P, React and Next.js developer in Dubai"
+                fetchPriority="high"
+                decoding="async"
                 className='w-full aspect-[4/5] object-cover rounded-2xl'
                 />
 
                 {/* floating badge */}
-                <div className='absolute -bottom-4 -right-4 glass rounded-xl px-4 py-3 animate-float'>
+                <div className='absolute -bottom-4 right-0 rounded-xl border border-border bg-card px-4 py-3 shadow-lg'>
                   <div className='flex items-center gap-3'>
-                    <div className='w-3 h-3 bg-green-500 rounded-full animate-pulse'/>
+                    <div className='w-2 h-2 bg-primary rounded-full'/>
                     <span className='text-sm font-medium'>
                       Available for work
                       </span>
@@ -164,9 +158,9 @@ export const Hero = () => {
             Technologies I Work With
             </p>
           <div className='relative overflow-hidden'>
-            <div className='flex animate-marquee ' >
+            <div className='flex animate-marquee [animation-duration:15s] md:[animation-duration:50s]' >
               {[...skills, ...skills].map((skills, idx) => (
-                <div key={idx} className='flex-shrink-0  px-8 py-4'>
+                <div key={idx} className='flex-shrink-0 px-3 md:px-8 py-4'>
                   <span className='text-xl font-semibold text-muted-foreground hover:text-foreground '>{skills}</span>
                   </div>
               ))}
@@ -177,12 +171,12 @@ export const Hero = () => {
 
       <div className='absolute bottom-8 left-1/2 -translate-x-1/2 
       animate-fade-in animation-delay-800'>
-        <a 
-        href="#about"
+        <SectionButton
+        sectionId="about"
         className='flex flex-col items-center gap-2 text-muted-foreground hover:text-muted-foreground/100'>
           <span className='text-xs uppercase tracking-wider'>Scroll</span>
           <ChevronDown className='w-6 h-6 animate-bounce'/>
-        </a>
+        </SectionButton>
       </div>
 
       

@@ -11,20 +11,20 @@ export default {
         background: "var(--color-background)",
         foreground: "var(--color-foreground)",
 
-        card: "var(--color-card)",
+        card: "#182128",
 
-        primary: "rgb(var(--color-primary) / <alpha-value>)",
-        "primary-foreground": "var(--color-primary-foreground)",
+        primary: "#2DD4BF",
+        "primary-foreground": "#09221F",
 
         secondary: "var(--color-secondary)",
-        "secondary-foreground": "var(--color-secondary-foreground)",
+        "secondary-foreground": "#2DD4BF",
 
         muted: "var(--color-muted)",
-        "muted-foreground": "var(--color-muted-foreground)",
+        "muted-foreground": "#A6B0BC",
 
-        border: "var(--color-border)",
+        border: "#2B3943",
 
-        surface: "var(--color-surface)",
+        surface: "#182128",
         highlight: "var(--color-highlight)",
 
         

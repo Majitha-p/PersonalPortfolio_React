@@ -19,7 +19,6 @@ const contactInfo = [
     icon: MapPin,
     label: "Location",
     value: "Dubai, UAE",
-    href: "#",
   },
 ];
 export const Contact = () => {
@@ -122,7 +121,7 @@ export const Contact = () => {
                     onChange={(e)=>
                       setFormData({...formData , name: e.target.value})
                     }
-                    className='w-full py-3 bg-surface rounded-xl border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all'/>
+                    className='w-full pl-[12px] py-3 bg-surface rounded-xl border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all'/>
                 </div>
 
                 <div>
@@ -140,7 +139,7 @@ export const Contact = () => {
                     onChange={(e)=>
                       setFormData({...formData , email: e.target.value})
                     }
-                    className='w-full py-3 bg-surface rounded-xl border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all'/>
+                    className='w-full pl-[12px] py-3 bg-surface rounded-xl border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all'/>
                 </div>
 
                 <div>
@@ -158,7 +157,7 @@ export const Contact = () => {
                     onChange={(e)=>
                       setFormData({...formData , message: e.target.value})
                     }
-                    className='w-full py-3 bg-surface rounded-xl border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all resize-none'/>
+                    className='w-full pl-[12px] py-3 bg-surface rounded-xl border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all resize-none'/>
                 </div>
 
                 <Button 

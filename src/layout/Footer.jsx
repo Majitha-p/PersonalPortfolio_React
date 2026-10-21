@@ -1,5 +1,6 @@
 import React from "react";
-import { Github, Linkedin, Twitter } from "lucide-react";
+import { SectionButton } from '@/components/SectionButton';
+import { Github, Linkedin } from "lucide-react";
 
 export const Footer = () => {
   return (
@@ -23,18 +24,17 @@ export const Footer = () => {
 
           {/* Navigation */}
           <div className="flex flex-wrap items-center gap-6 text-sm text-muted-foreground">
-            <a href="#about" className="hover:text-foreground transition">About</a>
-            <a href="#project" className="hover:text-foreground transition">Projects</a>
-            <a href="#experiance" className="hover:text-foreground transition">Experience</a>
-            <a href="#contact" className="hover:text-foreground transition">Contact</a>
+            <SectionButton sectionId="about" className="hover:text-foreground transition">About</SectionButton>
+            <SectionButton sectionId="projects" className="hover:text-foreground transition">Projects</SectionButton>
+            <SectionButton sectionId="experience" className="hover:text-foreground transition">Experience</SectionButton>
+            <SectionButton sectionId="contact" className="hover:text-foreground transition">Contact</SectionButton>
           </div>
 
           {/* Social Icons */}
           <div className="flex items-center gap-3">
             {[
-              { icon: Github, href: "#" },
-              { icon: Linkedin, href: "#" },
-              { icon: Twitter, href: "#" },
+              { icon: Github, href: "https://github.com/Majitha-p" },
+              { icon: Linkedin, href: "https://www.linkedin.com/in/majitha-p/" },
             ].map((item, idx) => {
               const Icon = item.icon;
               return (
