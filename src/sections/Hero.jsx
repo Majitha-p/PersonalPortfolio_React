@@ -54,7 +54,7 @@ export const Hero = () => {
       <div className='container mx-auto py-6 pt-32 pb-20 relative z-10'>
         <div className='grid lg:grid-cols-2 gap-12 items-center'>
           {/* left column - text content */}
-          <div className='space-y-8 '>
+          <div className='space-y-8 p-2'>
             <div className='animate-fade-in'>
               <span className='inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-sm text-primary'>
                   <span className='w-2 h-2 bg-primary rounded-full animate-pulse '/>
@@ -92,7 +92,7 @@ export const Hero = () => {
               }}>
                 Contact Me <ArrowRight className='w-5 h-5'/>
               </Button>
-              <a href="/cv.pdf" download="Majitha_P_Resume.pdf" className='inline-flex items-center justify-center gap-2 rounded-xl px-6 py-4 font-medium text-foreground transition-colors hover:bg-surface hover:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary'>
+              <a href="/cv.pdf" download="Majitha_CV.pdf" className='inline-flex items-center justify-center gap-2 rounded-xl px-6 py-4 font-medium text-foreground transition-colors hover:bg-surface hover:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary'>
                   <Download className='w-5 h-5' />
                   Download CV
               </a>
@@ -117,7 +117,7 @@ export const Hero = () => {
           {/* right column - profile image */}
           <div className='relative animation-fade-in animation-delay-300'>
             {/* profile image */}
-            <div className='relative max-w-md mx-auto'>
+            <div className='relative p-4 max-w-md mx-auto'>
               <div
               className='absolute inset-0
               rounded-3xl bg-gradient-to-br 
